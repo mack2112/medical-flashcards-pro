@@ -32,38 +32,15 @@ module.exports = {
           800: '#075985',
           900: '#0c4a6e',
         },
-        success: {
-          50: '#f0fdf4',
-          500: '#22c55e',
-          600: '#16a34a',
-        },
-        warning: {
-          50: '#fffbeb',
-          500: '#f59e0b',
-        }
       },
       animation: {
         'flip': 'flip 0.6s ease-in-out',
         'bounce-in': 'bounceIn 0.5s ease-out',
-        'slide-up': 'slideUp 0.3s ease-out',
+        'pulse-success': 'pulseSuccess 2s ease-in-out',
       },
-      keyframes: {
-        flip: {
-          '0%': { transform: 'rotateY(0)' },
-          '50%': { transform: 'rotateY(90deg)' },
-          '100%': { transform: 'rotateY(0)' },
-        },
-        bounceIn: {
-          '0%': { transform: 'scale(0.3)', opacity: '0' },
-          '50%': { transform: 'scale(1.05)' },
-          '100%': { transform: 'scale(1)', opacity: '1' },
-        },
-        slideUp: {
-          '0%': { transform: 'translateY(20px)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
-        }
-      }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }
